@@ -1,3 +1,24 @@
+<template>
+  <div class="Pokedex container">
+    <h1>Pokedex</h1>
+    <v-tabs
+      next-icon="mdi-menu-right"
+      prev-icon="mdi-menu-left"
+      show-arrows
+      center-active
+    >
+      <v-tab
+        v-for="endpoint in endpoints"
+        :key="endpoint.name"
+        @click="selectEndpoint(endpoint)"
+      >
+        {{ endpoint.name }}
+      </v-tab>
+    </v-tabs>
+    <PokedexList />
+  </div>
+</template>
+
 <script>
 import PokedexList from './PokedexList.vue';
 
@@ -33,23 +54,4 @@ export default {
 };
 </script>
 
-<template>
-  <div class="Pokedex">
-    <h1>Pokedex</h1>
-    <v-tabs
-      next-icon="mdi-menu-right"
-      prev-icon="mdi-menu-left"
-      show-arrows
-      center-active
-    >
-      <v-tab
-        v-for="endpoint in endpoints"
-        :key="endpoint.name"
-        @click="selectEndpoint(endpoint)"
-      >
-        {{ endpoint.name }}
-      </v-tab>
-    </v-tabs>
-  </div>
-  <PokedexList />
-</template>
+<style lang="sass" scoped></style>
