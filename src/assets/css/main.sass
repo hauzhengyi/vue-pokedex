@@ -1,0 +1,144 @@
+// ================= FONTS =================
+
+@font-face
+    font-family: "Montserrat-Regular"
+    src: url(/src/assets/fonts/Montserrat-Regular.ttf)
+
+@font-face
+    font-family: "Montserrat-SemiBold"
+    src: url(/src/assets/fonts/Montserrat-SemiBold.ttf)
+
+@font-face
+    font-family: "Montserrat-Bold"
+    src: url(/src/assets/fonts/Montserrat-Bold.ttf)
+
+@font-face
+    font-family: "Montserrat-ExtraBold"
+    src: url(/src/assets/fonts/Montserrat-ExtraBold.ttf)
+
+// ================= FONTS =================
+
+// ================= VARIABLES =================
+
+:root
+    --background: white
+    --button: rgb(240, 240, 240)
+    --box-shadow: rgb(200, 200, 200)
+    --divider: rgb(220, 220, 220)
+    --modal-overlay: rgba(0, 0, 0, 0.5)
+
+    --normal: rgb(226, 224, 217)
+    --fighting: rgb(213, 136, 119)
+    --flying: rgb(135, 192, 218)
+    --poison: rgb(168, 113, 206)
+    --ground: rgb(235, 194, 95)
+    --rock: rgb(191, 165, 105)
+    --bug: rgb(205, 228, 110)
+    --ghost: rgb(150, 122, 247)
+    --steel: rgb(226, 227, 234)
+    --fire: rgb(231, 111, 111)
+    --water: rgb(99, 185, 241)
+    --grass: rgb(121, 207, 112)
+    --electric: rgb(238, 237, 121)
+    --psychic: rgb(212, 105, 233)
+    --ice: rgb(162, 236, 255)
+    --dragon: rgb(168, 153, 255)
+    --dark: rgb(144, 137, 134)
+    --fairy: rgb(245, 190, 231)
+    --unknown: rgb(171, 196, 184)
+    --shadow: rgb(126, 124, 145)
+
+    --legendary-1: rgb(223, 167, 64)
+    --legendary-2: rgb(238, 226, 122)
+
+    --mythical-1: rgb(178, 75, 219)
+    --mythical-2: rgb(255, 155, 250)
+
+    --hp: rgb(255, 100, 100)
+    --attack: rgb(253, 185, 96)
+    --defense: rgb(243, 255, 73)
+    --special-attack: rgb(117, 255, 112)
+    --special-defense: rgb(131, 154, 255)
+    --speed: rgb(191, 123, 255)
+    --stat-bar: rgb(245, 245, 245)
+
+// ================= VARIABLES =================
+
+html
+    background: var(--background)
+
+body
+    padding: 0
+    margin: 0
+
+html, body
+    font-size: 0.9em
+
+*
+    font-family: Montserrat-Regular
+
+.capitalize
+    text-transform: capitalize
+
+.hide-scroll
+    -ms-overflow-style: none
+    scrollbar-width: none
+
+    &::-webkit-scrollbar
+        display: none
+
+.prevent-select
+    -webkit-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+.clickable
+    cursor: pointer
+
+.bold
+    font-weight: bold
+
+// ================= Types =================
+
+.normal
+    background: var(--normal)
+.fighting
+    background: var(--fighting)
+.flying
+    background: var(--flying)
+.poison
+    background: var(--poison)
+.ground
+    background: var(--ground)
+.rock
+    background: var(--rock)
+.bug
+    background: var(--bug)
+.ghost
+    background: var(--ghost)
+.steel
+    background: var(--steel)
+.fire
+    background: var(--fire)
+.water
+    background: var(--water)
+.grass
+    background: var(--grass)
+.electric
+    background: var(--electric)
+.psychic
+    background: var(--psychic)
+.ice
+    background: var(--ice)
+.dragon
+    background: var(--dragon)
+.dark
+    background: var(--dark)
+.fairy
+    background: var(--fairy)
+.unknown
+    background: var(--unknown)
+.shadow
+    background: var(--shadow)
+
+// ================= Types =================
