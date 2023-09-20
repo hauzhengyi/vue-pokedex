@@ -19,7 +19,7 @@
             class="modal__sprite"
             :src="
               pokemon?.sprites?.other['official-artwork'].front_default ||
-              '/src/assets/images/pokemon-no-data-2.png'
+              imgNoData
             "
             :alt="pokemon.name"
           />
@@ -120,6 +120,7 @@
 <script setup>
 import { ref, computed, onMounted } from "vue";
 import { useFetchGet } from "/src/composables/useFetch.js";
+import imgNoData from "@/assets/images/pokemon-no-data-2.webp";
 
 const props = defineProps({
   pokemon: {

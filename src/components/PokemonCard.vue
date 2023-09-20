@@ -9,10 +9,7 @@
     <img
       v-else
       class="pokemoncard__sprite"
-      :src="
-        pokemon?.sprites?.front_default ||
-        '/src/assets/images/pokemon-no-data.png'
-      "
+      :src="pokemon?.sprites?.front_default || imgNoData"
       :alt="pokemon?.name"
     />
     <div class="pokemoncard__name capitalize">{{ pokemon?.name || "" }}</div>
@@ -21,6 +18,7 @@
 
 <script setup>
 import { computed, onMounted } from "vue";
+import imgNoData from "@/assets/images/pokemon-no-data.webp";
 
 const props = defineProps({
   pokemon: {
