@@ -16,7 +16,7 @@
           v-for="index in indexSequence"
           class="pagination__index-number prevent-select clickable"
           :class="currentPage == index ? 'bold' : ''"
-          :ref="currentPage == index ? 'target' : ''"
+          ref="target"
           @click="$emit('changePage', index - 1)"
         >
           {{ index }}
@@ -78,7 +78,7 @@ const indexSequence = computed(() => {
 
 watchEffect(() => {
   if (!target.value) return;
-  target.value[0].scrollIntoView({ inline: "center" });
+  target.value[props.currentPage - 1].scrollIntoView({ inline: "center" });
   window.scrollTo({ top: 0 });
 });
 
