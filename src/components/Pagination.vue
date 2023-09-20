@@ -37,7 +37,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, watch, nextTick } from "vue";
+import { ref, computed, onMounted, watch, nextTick, watchEffect } from "vue";
 
 defineEmits(["changePage"]);
 
@@ -66,16 +66,21 @@ const indexSequence = computed(() => {
   return new Array(props.totalPages).fill(1).map((_, i) => i + 1);
 });
 
-watch(
-  () => props.currentPage,
-  () => {
-    nextTick(() => {
-      console.log(target);
-      target.value[0].scrollIntoView({ inline: "center" });
-      window.scrollTo({ top: 0 });
-    });
-  }
-);
+// watch(
+//   () => props.currentPage,
+//   () => {
+//     nextTick(() => {
+//       if (target) target.value[0].scrollIntoView({ inline: "center" });
+//       window.scrollTo({ top: 0 });
+//     });
+//   }
+// );
+
+watchEffect(() => {
+  if (!target.value) return;
+  target.value[0].scrollIntoView({ inline: "center" });
+  window.scrollTo({ top: 0 });
+});
 
 onMounted(async () => {});
 </script>
