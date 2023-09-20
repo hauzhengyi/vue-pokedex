@@ -70,6 +70,7 @@ watch(
   () => props.currentPage,
   () => {
     nextTick(() => {
+      console.log(target.value);
       target.value[0].scrollIntoView({ inline: "center" });
       window.scrollTo({ top: 0 });
     });
