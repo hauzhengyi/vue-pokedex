@@ -19,7 +19,7 @@
             class="modal__sprite"
             :src="
               pokemon?.sprites?.other['official-artwork'].front_default ||
-              '/src/assets/images/pokemon-no-data-2.webp'
+              '/src/assets/images/pokemon-no-data-2.png'
             "
             :alt="pokemon.name"
           />

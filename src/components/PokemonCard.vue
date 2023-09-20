@@ -11,7 +11,7 @@
       class="pokemoncard__sprite"
       :src="
         pokemon?.sprites?.front_default ||
-        '/src/assets/images/pokemon-no-data.webp'
+        '/src/assets/images/pokemon-no-data.png'
       "
       :alt="pokemon?.name"
     />
